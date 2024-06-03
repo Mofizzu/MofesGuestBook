@@ -1,8 +1,8 @@
 import Text "mo:base/Text";
-import Time "mo:base/Time";
+
 import List "mo:base/List";
 import Result "mo:base/Result";
-import Iter "mo:base/Iter" actor {
+ actor mofe{
   //variables
 
   //Type declarations
@@ -37,7 +37,7 @@ import Iter "mo:base/Iter" actor {
 
   //Regular Queries
 
-  public query func getGuest() : async Result.Result<List.List<Guest>, Text> {
+  public query func getGuests() : async Result.Result<List.List<Guest>, Text> {
     let size = List.size<Guest>(guestBook);
     if (size == 0) {
       return #err "No guests found";
